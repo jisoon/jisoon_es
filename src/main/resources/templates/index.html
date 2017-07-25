@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>ThymeLeaf Test</title>
+    <link href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            background: #eee !important;
+        }
+
+        .wrapper {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+        .form-signin {
+            max-width: 380px;
+            margin : 0 auto;
+            padding: 15px 35px 45px;
+        }
+
+    </style>
+    <script src="webjars/jquery/3.2.1/jquery.min.js"></script>
+    <script src="webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- wrap login -->
+<div class="container">
+    <!-- login -->
+    <div class="wrapper">
+        <div class="form-signin">
+            <h2>로그인 하세요!</h2>
+            <form action="/signin" method="post">
+                <div class="form-group">
+                    <label for="user_id">ID: </label>
+                    <input type="text" id="user_id" name="userId" class="form-control" value="{{adminId}}" placeholder="아이디">
+                </div>
+                <div class="form-group">
+                    <label for="user_pwd">Password: </label>
+                    <input type="password" class="form-control" name="password" id="user_pwd" value="{{adminPassword}}"
+                           placeholder="비밀번호">
+                </div>
+                <button type="submit" class="btn btn-primary">로그인</button>
+            </form>
+        </div>
+    </div>
+    <!-- //login -->
+</div>
+<!-- //wrap login -->
+</body>
+</html>
